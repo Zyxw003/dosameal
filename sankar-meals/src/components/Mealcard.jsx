@@ -7,9 +7,9 @@ const Mealcard = ({ meal }) => {
   const fav = isFavorites(meal.idMeal);
 
   return (
-    <div>
+    <div className="relative">
+      <Fav meal={meal} onToggle={toggle} isfav={fav} />
       <Link to={`/meal/${meal.idMeal}`}>
-        <Fav meal={meal} onToggle={toggle} isfav={fav} />
         <img
           src={meal.strMealThumb}
           alt={meal.strMeal}

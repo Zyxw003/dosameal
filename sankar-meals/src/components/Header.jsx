@@ -14,13 +14,13 @@ const Header = () => {
     <header className="bg-pink-500 text-black p-4 shadow">
       <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-4 items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link to={"/"} className="text-xl font-bold">
+          <Link to={""} className="text-xl font-bold">
             SP Meals
           </Link>
           <Link to={"/favorite"} className="text-black">
             Favorate
           </Link>
-          <Link to={`/categories/${category}`} className="text-black">
+          <Link to={category ? `/categories/${category}` : "/categories"} className="text-black">
             Catogories
           </Link>
         </div>
